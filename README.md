@@ -13,3 +13,4 @@ https://opentutorials.org/module/6341
 - CSS
 - Backend
 - 글 목록 가져오기
+- 읽기 기능 구현
