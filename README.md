@@ -16,3 +16,4 @@ https://opentutorials.org/module/6341
 - 읽기 기능 구현
 - 생성 기능 구현
 - 필요할 때 update, delete 기능 보이기
+- 수정 기능 구현
