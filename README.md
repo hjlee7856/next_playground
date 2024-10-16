@@ -9,3 +9,4 @@ https://opentutorials.org/module/6341
 - 뼈대 만들기
 - 라우팅
 - SPA(Single Page Application)
+- 정적인 자원 사용하기 (public)
