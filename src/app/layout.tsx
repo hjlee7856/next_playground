@@ -14,20 +14,29 @@ interface Props {
     children: ReactNode
 }
 
-export default function RootLayout(props : Props) {
+export default async function RootLayout(props: Props) {
+    // server component에서는 fetch를 사용할 때 useEffect를 사용하지 않음
+    // 또 fetch를 이용할 때 await를 사용
+    const resp = await fetch('http://localhost:9999/topics/')
+    const topics = await resp.json();
+
     return (
         <html>
         <body>
         <h1><a href="/">WEB</a></h1>
         <ol>
-            <li><Link href="/read/1">html</Link></li>
-            <li><Link href="/read/2">css</Link></li>
+            {/* 글 목록 생성 */}
+            {topics.map(topic => {
+                return <li key={topic.id}><Link href={`/read/${topic.id}`}>{topic.title}</Link></li>
+            })}
         </ol>
         {props.children}
         <ul>
             <li><Link href="/pages/create">create</Link></li>
             <li><Link href="/update/id">update</Link></li>
-            <li><button>delete</button></li>
+            <li>
+                <button>delete</button>
+            </li>
         </ul>
         </body>
         </html>
