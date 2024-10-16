@@ -18,3 +18,4 @@ https://opentutorials.org/module/6341
 - 필요할 때 update, delete 기능 보이기
 - 수정 기능 구현
 - 삭제 기능 구현
+- 환경변수

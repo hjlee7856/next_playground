@@ -19,7 +19,7 @@ export default function Update(props: Props){
         evt.preventDefault();
         const title = evt.target.title.value;
         const body = evt.target.body.value;
-        const resp = await fetch(`http://localhost:9999/topics/${id}`, {
+        const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ export default function Update(props: Props){
 
     // 갱신
     async function refresh(){
-        const resp = await fetch(`http://localhost:9999/topics/${id}`);
+        const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics/${id}`);
         const topic = await resp.json();
         setTitle(topic.title);
         setBody(topic.body);

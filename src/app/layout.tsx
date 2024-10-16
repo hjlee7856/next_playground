@@ -20,7 +20,7 @@ export default async function RootLayout(props: Props) {
     // 또 fetch를 이용할 때 await를 사용
     // {cache:'no-cache'}를 추가하면 캐쉬를 사용하지 않게 됨
     // 이제 layout.js의 fetch는 랜더링 될 때마다 캐쉬를 사용하지 않고 신선한 데이터를 가져옴
-    const resp = await fetch('http://localhost:9999/topics/', {cache:'no-cache'})
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics/`, {cache:'no-cache'})
     const topics = await resp.json();
 
     return (
