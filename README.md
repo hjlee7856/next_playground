@@ -1,3 +1,8 @@
 # NextJS PlayGround
 
-- 공식 가이드를 따라가며 학습(예정)
+
+가이드를 따라가며 학습  
+https://opentutorials.org/module/6341
+- Next.js 설치, 실행
+- 샘플 앱 세탁
+- 
