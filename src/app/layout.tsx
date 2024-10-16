@@ -21,7 +21,7 @@ export default function RootLayout(props : Props) {
         </ol>
         {props.children}
         <ul>
-            <li><a href="/create">create</a></li>
+            <li><a href="/pages/create">create</a></li>
             <li><a href="/update/id">update</a></li>
             <li><button>delete</button></li>
         </ul>
