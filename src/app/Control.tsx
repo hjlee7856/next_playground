@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import {useParams, useRouter} from 'next/navigation';
 
 // app/layout.js 전체를 client component로 전환해도 되지만
 // server component의 이점을 포기하기는 싫기 때문에
@@ -10,12 +10,28 @@ export function Control() {
     // useParams를 사용해야 하는데 useParams는 client component
     const params = useParams();
     const id = params.id;
+    const router = useRouter();
+
+    const clickDelete = async () => {
+        const resp = await fetch(`http://localhost:9999/topics/${id}`, {
+            method: 'DELETE',
+        });
+        await resp.json();
+        router.push('/');
+        router.refresh();
+    }
+
     return (
         <ul>
             <li><Link href="/create">Create</Link></li>
             {id ? <>
-                <li><Link href={"/update/"+id}>Update</Link></li>
-                <li><input type="button" value="delete" /></li>
+                <li>
+                    <Link href={"/update/"+id}>Update</Link>
+                </li>
+                <li>
+                    <button onClick={clickDelete}>delete
+                    </button>
+                </li>
             </> : null}
         </ul>
     );
