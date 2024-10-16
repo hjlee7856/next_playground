@@ -1,5 +1,6 @@
 import './globals.css'
 import { ReactNode } from 'react'
+import Link from "next/link";
 
 export const metadata = {
     title: 'WEB tutorial',
@@ -16,13 +17,13 @@ export default function RootLayout(props : Props) {
         <body>
         <h1><a href="/">WEB</a></h1>
         <ol>
-            <li><a href="/read/1">html</a></li>
-            <li><a href="/read/2">css</a></li>
+            <li><Link href="/read/1">html</Link></li>
+            <li><Link href="/read/2">css</Link></li>
         </ol>
         {props.children}
         <ul>
-            <li><a href="/pages/create">create</a></li>
-            <li><a href="/update/id">update</a></li>
+            <li><Link href="/pages/create">create</Link></li>
+            <li><Link href="/update/id">update</Link></li>
             <li><button>delete</button></li>
         </ul>
         </body>

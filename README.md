@@ -8,3 +8,4 @@ https://opentutorials.org/module/6341
 - 빌드와 배포
 - 뼈대 만들기
 - 라우팅
+- SPA(Single Page Application)
