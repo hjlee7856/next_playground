@@ -15,3 +15,4 @@ https://opentutorials.org/module/6341
 - 글 목록 가져오기
 - 읽기 기능 구현
 - 생성 기능 구현
+- 필요할 때 update, delete 기능 보이기
