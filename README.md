@@ -5,4 +5,5 @@
 https://opentutorials.org/module/6341
 - Next.js 설치, 실행
 - 샘플 앱 세탁
-- 
+- 빌드와 배포
+- 뼈대 만들기
